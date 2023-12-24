@@ -25,8 +25,8 @@ import java.util.Map;
 @Component
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
-    private final TokenService tokenService;
-    private final UserDetailsService userService;
+    private TokenService tokenService;
+    private UserDetailsService userService;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request,

@@ -26,7 +26,7 @@ public class AutenticacaoService {
             var usuario = (Usuario) authenticate.getPrincipal();
             String token = tokenService.gerarToken(usuario);
             return token;
-        } catch(AuthenticationException e){
+        } catch(AutenticacaoFalhaException e){
             throw new AutenticacaoFalhaException("Invalid User or Password");
         }
     }

@@ -14,6 +14,10 @@ public class RegistroJaExistenteException extends RuntimeException {
         this(nome, identificador.toString());
     }
 
+    public RegistroJaExistenteException(String nome, String identificador) {
+        this.nome = nome;
+        this.identificador = identificador;
+    }
 
     public String getMessage() {
         if (nome == null || identificador == null)

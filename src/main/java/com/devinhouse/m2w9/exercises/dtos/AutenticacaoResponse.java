@@ -10,4 +10,11 @@ public class AutenticacaoResponse {
     public void setToken(String token) {
         this.token = token;
     }
+
+    public AutenticacaoResponse() {
+    }
+
+    public AutenticacaoResponse(String token) {
+        this.token = token;
+    }
 }

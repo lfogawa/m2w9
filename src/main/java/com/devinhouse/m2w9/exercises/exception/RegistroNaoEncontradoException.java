@@ -14,11 +14,14 @@ public class RegistroNaoEncontradoException extends RuntimeException {
         this(nome, identificador.toString());
     }
 
-
+    public RegistroNaoEncontradoException(String nome, String identificador) {
+        this.nome = nome;
+        this.identificador = identificador;
+    }
     public String getMessage() {
         if (nome == null || identificador == null)
             return null;
-        return String.format("Registro '%s' nnao encontrado com identificador '%s'", nome, identificador);
+        return String.format("Registro '%s' não encontrado com identificador '%s'", nome, identificador);
     }
 
 

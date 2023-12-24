@@ -84,9 +84,9 @@ public class VeiculoController {
             Veiculo veiculo2 = new Veiculo("BCA-4321", TipoVeiculo.ONIBUS, "Enterprise", 1960, "prata");
             veiculoService.salvar(veiculo1);
             veiculoService.salvar(veiculo2);
-            Multa multa1Veic1 = new Multa(veiculo1, "Farol apagado", "Gothan City", 250F);
-            Multa multa2Veic1 = new Multa(veiculo1, "Insulfilm", "Gothan City", 100F);
-            Multa multa1Veic2 = new Multa(veiculo2, "Excesso velocidade", "Hiper-espaço", 400F);
+            Multa multa1Veic1 = new Multa("Gothan City", "Farol apagado", 250F, veiculo1);
+            Multa multa2Veic1 = new Multa("Gothan City", "Insulfilm", 100F, veiculo1);
+            Multa multa1Veic2 = new Multa("Hiper-espaço", "Excesso velocidade", 400F, veiculo2);
             veiculoService.cadastrarMulta(veiculo1.getPlaca(),multa1Veic1);
             veiculoService.cadastrarMulta(veiculo1.getPlaca(),multa2Veic1);
             veiculoService.cadastrarMulta(veiculo2.getPlaca(),multa1Veic2);
